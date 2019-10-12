@@ -1,0 +1,24 @@
+<!--
+  FEI Winter 2020 Coop Assignment
+-->
+
+<span [ngSwitch]="navtype">
+  <section *ngSwitchCase="'top'" class="section FE-top">
+    <div class="container">
+      <h1 class="title">FEI Winter 2020 Coop<i> NG</i> Checkride</h1>
+    </div>
+  </section>
+
+  <footer *ngSwitchCase="'foot'" class="footer">
+    <div class="container">
+      <div class="content">
+        <p>
+          &copy;
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <p *ngSwitchDefault>DEFAULT</p>
+
+</span>

@@ -1,0 +1,51 @@
+
+$FE-Back-Color: #EFF0EB;
+$family-sans-serif: "Nunito", sans-serif;
+
+
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+
+
+.FE-top {
+    background: $FE-Back-Color;
+}
+.footer {
+    background: $FE-Back-Color;
+  //  margin-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0%;
+}
+
+html {
+    overflow: auto;
+}
+
+.FE-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.helptext {
+    padding: 20px;
+    margin-bottom: 2em;
+    min-height: 4em;
+    max-width: 600px;
+    background: #EFF0EB;
+    border-radius: 4px;
+    p {
+        margin-bottom: 1em;
+    }
+    code {
+        background: none;
+        color: blueviolet;
+    }
+}
+form button {
+    margin-right: 2em;
+}

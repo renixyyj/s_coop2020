@@ -1,0 +1,30 @@
+<!--
+  FEI Winter 2020 Coop Assignment
+-->
+<app-shared navtype=top></app-shared>
+
+<section class="section">
+  <div class="container">
+    <div class="container">
+      <div class="helptext">
+        <div *ngIf="(helptext | async) as h">
+          <p [innerHTML]="h?.p1">
+            {{h?.error}}
+          </p>
+        </div>
+      </div>
+      <span>{{names.length}} names in list</span>
+      <br><br>
+      <span *ngIf="score | async as s">Final Score: {{ s }}</span><br><br>
+    </div>
+    <form [formGroup]="form" (ngSubmit)='calculateScore()'>
+      <p class="control">
+        <button type="button" class="button is-info" (click)="help()">Read Instructions</button>
+        <button type="button" class="button is-info" (click)="hint()">Ask for a Hint</button>
+      </p><br>
+      <p class="control">
+        <button type="submit" class="button is-info">Calculate Score</button>
+      </p>
+    </form>
+  </div>
+</section>
